@@ -1,6 +1,6 @@
 # coding: utf-8
 
-# Copyright (c) 2014-2019 Musharraf Omer
+# Copyright (c) 2021 Musharraf Omer and Blind Pandas Team
 # This file is covered by the GNU General Public License.
 
 """
@@ -11,25 +11,31 @@
   Crafted by Musharraf Omer <info@blindpandas.com>.
 """
 
-import wx
 import globalPluginHandler
-import scriptHandler
-import gui
-import speech
-import controlTypes
-import globalCommands
+from scriptHandler import script
+from .command_palette_dialog import CommandPaletteDialog
 
 
-import addonHandler
-addonHandler.initTranslation()
+
+# import addonHandler
+# addonHandler.initTranslation()
+
+
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.command_palette_dialog = CommandPaletteDialog()
 
     def terminate(self):
         """Terminates the add-on."""
 
-    __gestures = {"kb:nvda+tab": "speakObject"}
+    @script(
+        description=_("Launch the command palette"),
+        category="TOOLS",
+        gesture="kb:nvda+shift+p",
+    )
+    def script_launch_command_palette(self, gesture):
+        self.command_palette_dialog.popup_command_palette()

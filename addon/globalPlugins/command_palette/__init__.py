@@ -13,7 +13,7 @@
 
 import globalPluginHandler
 from scriptHandler import script
-from .command_palette_dialog import CommandPaletteDialog
+from .command_palette import CommandPaletteDialog
 
 
 

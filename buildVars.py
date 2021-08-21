@@ -29,7 +29,7 @@ addon_info = {
 	# Author(s)
 	"addon_author": "Musharraf Omer <info@blindpandas.com>",
 	# URL for the add-on documentation support
-	"addon_url": "https://blindpandas.com/nvda-spellcheck",
+	"addon_url": "https://blindpandas.com/command_palette",
 	# Documentation file name
 	"addon_docFileName": "readme.html",
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)

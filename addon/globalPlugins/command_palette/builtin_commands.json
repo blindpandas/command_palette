@@ -1,0 +1,56 @@
+[
+  {
+    "label": "Open Notepad",
+    "category": "app",
+    "command_info": "notepad.exe"
+  },
+  {
+    "label": "Open WordPad",
+    "category": "app",
+    "command_info": "wordpad.exe"
+  },
+  {
+    "label": "Open Home Directory",
+    "category": "special",
+    "command_info": "home"
+  },
+  {
+    "label": "Open Command Prompt",
+    "category": "app",
+    "command_info": "cmd.exe"
+  },
+  {
+    "label": "Search Google",
+    "category": "web.search",
+    "command_info": "https://google.com/search",
+    "args": {"query": "q"}
+  },
+  {
+    "label": "Search Duck Duck Go",
+    "category": "web.search",
+    "command_info": "https://duckduckgo.com/",
+    "args": {"query": "q"}
+  },
+  {
+    "label": "Search Wikipedia",
+    "category": "web.search",
+    "command_info": "https://en.wikipedia.org/wiki/Special:Search/",
+    "args": {"query": "search"}
+  },
+  {
+    "label": "Define on Merriam-Webster Dictionary",
+    "category": "web.search",
+    "command_info": "https://www.merriam-webster.com/dictionary",
+    "args": {"search_as_suffix": true}
+  },
+  {
+    "label": "Open User Commands Json",
+    "category": "special",
+    "command_info": "open_user_commands_json"
+  },
+  {
+    "label": "Open Scratchpad Directory",
+    "category": "special",
+    "command_info": "open_scratchpad_directory"
+  }
+]

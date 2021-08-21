@@ -12,29 +12,28 @@
 """
 
 import globalPluginHandler
+from contextlib import suppress
 from scriptHandler import script
 from .command_palette import CommandPaletteDialog
-
 
 
 # import addonHandler
 # addonHandler.initTranslation()
 
 
-
-
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.command_palette_dialog = CommandPaletteDialog()
 
     def terminate(self):
         """Terminates the add-on."""
+        with suppress(Exception):
+            self.command_palette_dialog.Destroy()
 
     @script(
-        description=_("Launch the command palette"),
-        category="TOOLS",
+        description=_("Launches the command palette"),
+        category="Tools",
         gesture="kb:nvda+shift+p",
     )
     def script_launch_command_palette(self, gesture):
